@@ -1,3 +1,12 @@
 Quick library to set the default pid file used by `rails server` to nil instead of tmp/pids/server.pid.
 
 Running non-daemonized, in a container, one doesn't really need the pidfile and this may allow use in a readonly environment.
+
+# Installation
+
+Add gem 'nopid_rails_server' to Gemfile
+
+Add to the bottom of config/boot.rb require 'nopid_rails_server'.
+
+Note that adding tings to config/boot.rb is generally a bad idea, and I'd love a suggestion of a Better Way.  See here for rails initialization instructions: http://guides.rubyonrails.org/initialization.html#railties-lib-rails-app-loader-rb; this gem need to get in place before step 5.
+
