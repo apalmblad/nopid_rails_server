@@ -1,0 +1,3 @@
+Quick library to set the default pid file used by `rails server` to nil instead of tmp/pids/server.pid.
+
+Running non-daemonized, in a container, one doesn't really need the pidfile and this may allow use in a readonly environment.
